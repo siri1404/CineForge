@@ -1,37 +1,50 @@
-# CineForge - Movie Tracking Platform
+# 🎥 CineForge — A Modern Movie Discovery & Tracking Platform  
+*A full-stack web app for exploring, tracking, and streaming movies powered by real-time APIs.*
 
-A sophisticated movie tracking platform with real movie data integration.
+---
 
-## 🎬 Features
+## 🚀 What is CineForge?
 
-- **Real Movie Data**: Integration with TMDB API for comprehensive movie information
-- **Streaming Availability**: Where to watch movies across different platforms
-- **User Reviews**: Both TMDB reviews and user-generated content
-- **Advanced Search**: Filter by genre, year, rating, and more
-- **Watchlist Management**: Track movies you want to watch, are watching, or have watched
-- **Social Features**: Activity feeds and user interactions
+CineForge is a beautifully designed, scalable movie discovery and tracking platform built using modern full-stack technologies. It integrates real-world movie databases, user interaction flows, and streaming metadata to provide users with a seamless cinematic experience.
 
-## 🔧 API Setup
+> Think **Goodreads**, but for movies.
 
-To get real movie data, you'll need API keys from these services:
+---
 
-### 1. TMDB (The Movie Database) - **FREE**
-- **What it provides**: Movie details, images, cast, crew, reviews, trailers
-- **Free tier**: 1,000 requests per day
-- **Sign up**: https://www.themoviedb.org/settings/api
-- **Cost**: Free forever
+## 🔥 Key Features
 
-### 2. Watchmode API - **FREE TIER AVAILABLE**
-- **What it provides**: Streaming availability (Netflix, Prime, Hulu, etc.)
-- **Free tier**: 1,000 requests per month
-- **Sign up**: https://api.watchmode.com/
-- **Cost**: Free tier, then $8/month for 10K requests
+- 🎬 **Live Movie Metadata**: Pulls real-time trending, search, and movie data from TMDB  
+- 📍 **Streaming Availability**: Find where to watch every movie (Netflix, Prime, etc.) via Watchmode API  
+- 📚 **Dynamic Watchlist**: Track “Watched”, “Watching”, “Want to Watch” lists across all users  
+- 🗣️ **Reviews & Ratings**: Community ratings from TMDB + ability to plug in user reviews  
+- 🔍 **Advanced Search & Filters**: Sort by title, year, genre, language, popularity, and rating  
+- 🤝 **Social Integration**: Follow users, activity feed, watch challenges, and recent activity  
+- 📊 **Analytics Dashboard (optional)**: Your watch stats over time and across genres
 
-### 3. OMDB API - **FREE TIER AVAILABLE**
-- **What it provides**: Additional movie metadata and ratings
-- **Free tier**: 1,000 requests per day
-- **Sign up**: http://www.omdbapi.com/apikey.aspx
-- **Cost**: Free tier, then $10/month for unlimited
+---
+
+## 🧰 Tech Stack
+
+| Layer        | Tech                                          |
+|--------------|-----------------------------------------------|
+| **Frontend** | React, TailwindCSS, Axios, React Router DOM   |
+| **Backend**  | Node.js / Flask (optional for auth or custom API wrapper) |
+| **APIs**     | TMDB, Watchmode, OMDB                         |
+| **Storage**  | Firebase (for user data + auth)               |
+| **Hosting**  | Vercel (frontend), Render (backend)           |
+| **Extras**   | .env configs, caching, pagination, error boundaries |
+
+---
+
+## 🔐 API Keys Setup
+
+> Create a `.env` file in the root directory of your project:
+
+```env
+VITE_TMDB_API_KEY=your_tmdb_api_key_here
+VITE_WATCHMODE_API_KEY=your_watchmode_api_key_here
+VITE_OMDB_API_KEY=your_omdb_api_key_here
+
 
 ## 🚀 Setup Instructions
 
@@ -104,12 +117,5 @@ const providers = await MovieApiService.getWatchProviders(27205);
 - **MovieGlu API**: Showtimes and cinema data
 - **Rotten Tomatoes API**: Professional critic scores
 
-## 💡 Pro Tips
 
-1. **Cache API responses** to reduce API calls
-2. **Use image optimization** for movie posters
-3. **Implement pagination** for large result sets
-4. **Add error handling** for API failures
-5. **Use environment variables** for API keys
-
-The platform now supports real movie data integration! Just add your API keys and you'll have access to millions of movies with real images, reviews, and streaming information.
+The platform supports real movie data integration! Just add your API keys and you'll have access to millions of movies with real images, reviews, and streaming information.
